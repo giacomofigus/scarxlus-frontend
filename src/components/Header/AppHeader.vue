@@ -1,10 +1,20 @@
 <script>
-    import OffCanvas from './OffCanvas.vue';
+import OffCanvas from './OffCanvas.vue';
 
     export default{
         name: 'AppHeader',
         components: {
             OffCanvas
+        },
+        data(){
+            return{
+                isOffcanvasVisible: false
+            };
+        },
+        methods: {
+            toggleOffcanvas(){
+                this.isOffcanvasVisible = !this.isOffcanvasVisible;
+            }
         }
     }
 </script>
@@ -14,7 +24,7 @@
     <header>
         <nav>
             <figure>
-                <img src="../assets/img/logo.png" alt="logo">
+                <img src="../../assets/img/logo.png" alt="logo">
             </figure>
             <ul>
                 <li class="active">Home</li>
@@ -30,30 +40,83 @@
 
                 <a href="" class="sign-in">Registrati</a>
 
-                <a 
-                @click=""
+                <button 
+                @click="toggleOffcanvas"
                 href="" 
                 class="hamburger-menu">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
-                </a>
+                </button>
             </div>
         </nav>
-
-        
     </header>
+
+    <OffCanvas class="display-none" :isVisible="isOffcanvasVisible" @close="toggleOffcanvas"/>
+
+    <div>
+
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+    </div>
 </template>
 
 <style scoped lang="scss">
-    @use '../assets/styles/partials/variables' as *;
+    @use '../../assets/styles/partials/variables' as *;
 
     header{
+        z-index: 1;
         position: fixed;
         left: 0;
         right: 0;
         height: 80px;
-        border: 1px solid red;
+        // border: 1px solid red;
         font-family: $font-bebas;
         letter-spacing: 2px;
         padding-block: 20px;
@@ -129,6 +192,10 @@
         }
     }
 
+    .display-none{
+        display: none;
+    }
+
     // LAPTOP
     @media screen and (max-width: 1024px) {
         header{
@@ -164,6 +231,9 @@
                         justify-content: center;
                         align-items: start;
                         transform: rotate(180deg);
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: none;
 
                         .line{
                             background-color: $button-yellow;
@@ -171,19 +241,22 @@
                             border-radius: 5px;
 
                             &:nth-child(3){
-                                width: 35px;
+                                width: 25px;
                             }
                             &:nth-child(2){
-                                width: 20px;
-                                margin-block: 8px;
+                                width: 15px;
+                                margin-block: 7px;
                             }
                             &:nth-child(1){
-                                width: 30px;
+                                width: 28px;
                             }
                         }
                     }
                 }
             }
+        }
+        .display-none{
+            display: flex;
         }
     }
 </style>
