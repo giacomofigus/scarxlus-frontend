@@ -1,10 +1,10 @@
 <script>
-import OffCanvas from './OffCanvas.vue';
+import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
 
     export default{
         name: 'AppHeader',
         components: {
-            OffCanvas
+            AppHeaderOffCanvas
         },
         data(){
             return{
@@ -24,14 +24,51 @@ import OffCanvas from './OffCanvas.vue';
     <header>
         <nav>
             <figure>
-                <img src="../../assets/img/logo.png" alt="logo">
+                <router-link to="/"> 
+                    <img src="../../assets/img/logo.png" alt="logo">
+                </router-link>
             </figure>
             <ul>
-                <li class="active">Home</li>
-                <li>Chi sono</li>
-                <li>Servizi</li>
-                <li>Blog</li>
-                <li>Contatti</li>
+                <li>
+                    <router-link 
+                    class="router" 
+                    exact-active-class="active"
+                    to="/">
+                        Home
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    class="router"
+                    exact-active-class="active" 
+                    to="/chi-sono">
+                        Chi sono
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    class="router"
+                    exact-active-class="active" 
+                    to="/servizi">
+                        Servizi
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    class="router"
+                    exact-active-class="active" 
+                    to="/blog">
+                        Blog
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    class="router"
+                    exact-active-class="active" 
+                    to="/contatti">
+                        Contatti
+                    </router-link>
+                </li>
             </ul>
             <div class="buttons">
                 <a href="" class="cart">
@@ -52,7 +89,11 @@ import OffCanvas from './OffCanvas.vue';
         </nav>
     </header>
 
-    <OffCanvas class="display-none" :isVisible="isOffcanvasVisible" @close="toggleOffcanvas"/>
+    <AppHeaderOffCanvas 
+    class="display-none" 
+    :isVisible="isOffcanvasVisible" 
+    @close="toggleOffcanvas"
+    />
 
     <div>
 
@@ -141,18 +182,25 @@ import OffCanvas from './OffCanvas.vue';
                 border-radius: 25px;
                 height: 100%;
                 li{
+                    // border: 1px solid red;
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     color: $text-primary;
                     border-radius: 25px;
                     height: 100%;
-                    padding-inline: 25px;
-                    &:hover{
-                        color: $button-yellow;
-                        cursor: pointer;
-                    }
-                    &.active{
-                        background-color: $button-yellow;
+                    width: 100px;
+                    flex: 1;
+                    text-align: center;
+                    // padding-inline: 25px;
+                    .router{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        &:not(.active):hover {
+                            color: $button-yellow;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -192,6 +240,14 @@ import OffCanvas from './OffCanvas.vue';
         }
     }
 
+    .active{
+        background-color: $button-yellow;
+        border-radius: 25px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     .display-none{
         display: none;
     }
@@ -203,7 +259,8 @@ import OffCanvas from './OffCanvas.vue';
             nav{
                 ul{
                     li{
-                        padding-inline: 15px;
+                        // padding-inline: 15px;
+                        width: 80px;
                     }
                 }
             }

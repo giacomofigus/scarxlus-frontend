@@ -1,6 +1,6 @@
 <script>
     export default{
-        name: "OffCanvas",
+        name: "AppHeaderOffCanvas",
         props: {
             isVisible: {
                 type: Boolean,
@@ -31,11 +31,46 @@
 
         <nav>
             <ul>
-                <li class="line">Home</li>
-                <li class="line">Chi sono</li>
-                <li class="line">Servizi</li>
-                <li class="line">Blog</li>
-                <li>Contatti</li>
+                <li class="line">
+                    <router-link 
+                    class="router" 
+                    to="/"
+                    @click="$emit('close')">
+                        Home
+                    </router-link>
+                </li>
+                <li class="line">
+                    <router-link 
+                    class="router" 
+                    to="/chi-sono"
+                    @click="$emit('close')">
+                        Chi sono
+                    </router-link>
+                </li>
+                <li class="line">
+                    <router-link 
+                    class="router" 
+                    to="/servizi"
+                    @click="$emit('close')">
+                        Servizi
+                    </router-link>
+                </li>
+                <li class="line">
+                    <router-link 
+                    class="router" 
+                    to="/blog"
+                    @click="$emit('close')">
+                        Blog
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    class="router" 
+                    to="/contatti"
+                    @click="$emit('close')">
+                        Contatti
+                    </router-link>
+                </li>
             </ul>
             <a class="sign-in" href="">Inizia ora</a>
             <p>
@@ -110,7 +145,7 @@
                     font-size: 22px;
                     padding: 20px 0;
                     letter-spacing: 2px;
-                    &:hover{
+                    .router:hover{
                         color: $button-yellow;
                         cursor: pointer;
                     }
