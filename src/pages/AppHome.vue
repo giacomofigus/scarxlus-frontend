@@ -13,7 +13,7 @@
 <template>
     <div class="container">
         <AppHomeHero/>
-        <!-- <AppHomeAbout/> -->
+        <AppHomeAbout/>
     </div>
 </template>
 
