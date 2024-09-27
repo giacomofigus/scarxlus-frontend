@@ -94,58 +94,6 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
     :isVisible="isOffcanvasVisible" 
     @close="toggleOffcanvas"
     />
-
-    <div>
-
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-    </div>
 </template>
 
 <style scoped lang="scss">
