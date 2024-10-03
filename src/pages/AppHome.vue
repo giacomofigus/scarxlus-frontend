@@ -11,14 +11,14 @@
 </script>
 
 <template>
-    <div class="container">
+    <main>
         <AppHomeHero/>
         <AppHomeAbout/>
-    </div>
+    </main>
 </template>
 
 <style scoped lang="scss">
-    .container {
+    main {
         display: flex;
         flex-direction: column;
 

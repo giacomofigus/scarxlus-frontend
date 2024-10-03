@@ -1,0 +1,27 @@
+@use '../partials/variables' as *;
+
+@mixin button-black{
+    font-family: 'Milker';
+    // border: 1px solid $text-primary;
+    padding: 10px;
+    padding-inline: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: $button-black;
+}
+
+@mixin button-yellow{
+    font-family: 'Milker';
+    border: 1px solid $text-primary;
+    padding: 10px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: $button-yellow;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

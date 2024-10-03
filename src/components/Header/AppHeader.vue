@@ -100,7 +100,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
     @use '../../assets/styles/partials/variables' as *;
 
     header{
-        z-index: 1;
+        z-index: 2;
         position: fixed;
         left: 0;
         right: 0;
@@ -111,6 +111,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
         padding-block: 20px;
         padding-inline: 50px;
         font-size: 18px;
+        background-color: $bg-main;
         nav{
             display: flex;
             align-items: center;
