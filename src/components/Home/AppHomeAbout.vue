@@ -30,6 +30,10 @@
                 <p><span>200+</span>Allievi</p>
             </div>
         </div>
+
+        <div class="layer">
+
+        </div>
     </div>
 </template>
 
@@ -40,7 +44,6 @@
     .about{
         position: relative;
         color: white;
-        // border: 1px solid red;
         display: flex;
         justify-content: space-between;
         overflow: hidden;
@@ -53,7 +56,6 @@
             }
         }
         .left{
-            // border: 1px solid blue;
             padding-left: 50px;
             width: 40%;
             h2{
@@ -96,7 +98,6 @@
         }
 
         .right{
-            // border: 1px solid green;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -104,7 +105,6 @@
 
 
             .container-propics{
-                // border: 1px solid red;
                 gap: 5px; 
                 position: absolute;
                 right: 20%;
@@ -129,6 +129,16 @@
         .left, .right{
             z-index: 1;
         }
+
+        .layer{
+            // border: 1px solid red;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            height: 500px;
+            background: rgb(11,11,11);
+            background: linear-gradient(0deg, rgba(11,11,11,1) 0%, rgba(0,0,0,0) 100%);
+        }
     }
 
     // LAPTOP
@@ -148,7 +158,6 @@
             flex-direction: column;
             justify-content: start;
             overflow: hidden;
-            border: 1px solid green;
 
             .bg-carlo{
                 width: 350px;
