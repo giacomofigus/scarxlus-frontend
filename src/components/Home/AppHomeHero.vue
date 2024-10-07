@@ -58,7 +58,6 @@
         // border: 1px solid red;
         h1{
             color: $text-primary;
-            font-family: 'Milker', sans-serif;
             font-size: 55px;
             letter-spacing: 3px;
             span{

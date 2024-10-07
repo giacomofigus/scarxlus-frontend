@@ -59,7 +59,6 @@
             padding-left: 50px;
             width: 40%;
             h2{
-                font-family: 'Milker';
                 font-size: 3rem;
                 margin-top: 40px;
             }
