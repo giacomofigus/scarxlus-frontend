@@ -1,6 +1,58 @@
 <script>
+    import axios from 'axios';
+    import AppHomePlansCard from './AppHomePlansCard.vue';
+
     export default{
         name: 'AppHomePlans',
+        components:{
+            AppHomePlansCard
+        },
+        data(){
+            return{
+                plans : [],
+                activeIndex: 0,
+            }
+        },
+        methods: {
+            setActive(index){
+                this.activeIndex = index;
+                this.progressionBar(index);
+                this.scrollTo(index);
+            },
+            progressionBar(index){
+                const percentage = ((index + 1) / this.plans.length)*100;
+                const whiteBar = document.querySelector('.white-bar');
+                if(whiteBar){
+                    whiteBar.style.width = `${percentage}%`;
+                }
+            },
+            nextCard(){
+                this.activeIndex = (this.activeIndex + 1) % this.plans.length
+                this.progressionBar(this.activeIndex)
+                this.scrollTo(this.activeIndex);
+            },
+            previousCard(){
+                this.activeIndex = (this.activeIndex - 1 + this.plans.length) % this.plans.length
+                this.progressionBar(this.activeIndex)
+                this.scrollTo(this.activeIndex);
+            },
+            scrollTo(index){
+                const container = this.$refs.cardsContainer
+                const card = container.children[index]
+                const offsetLeft = card.offsetLeft;
+                
+                container.scrollTo({
+                    left: offsetLeft,
+                    behavior: 'smooth',
+                }) 
+            }
+            
+        },
+        mounted(){
+            axios.get('http://127.0.0.1:8000/api/plans').then(response => {
+                this.plans = response.data.plans;
+            })
+        }
     }
 </script>
 
@@ -13,26 +65,33 @@
             <div class="right-upper">
                 <h2>I miei piani <span class="d-block">di allenamento</span></h2>
                 <div class="arrows">
-                    <fa class="icon arrow" :icon="['fas', 'arrow-left']"/>
-                    <fa class="icon arrow" :icon="['fas', 'arrow-right']"/>
+                    <fa 
+                    class="icon arrow" 
+                    :icon="['fas', 'arrow-left']"
+                    @click="previousCard()"/>
+                    
+                    <fa 
+                    class="icon arrow" 
+                    :icon="['fas', 'arrow-right']"
+                    @click="nextCard()"/>
                 </div>
             </div>
         </div>
 
-        <figure>
-            <img src="../../assets/img/Forms.png" alt="forms">
-        </figure>
-
-        <div class="cards-container">
-            <div class="card">
-                CARD 1
-            </div>
-            <div class="card">
-                CARD 2
-            </div>
-            <div class="card">
-                CARD 3
-            </div>
+        <div class="cards-container" ref="cardsContainer">
+            <AppHomePlansCard 
+            v-for="(plan, index) in plans" 
+            :key="index"
+            :name="plan.type"
+            :price="Math.floor(plan.product.price)" 
+            :description="plan.product.description"
+            :personalized="plan.personalized"
+            :test_videocall="plan.test_videocall"
+            :send_photos="plan.send_photos"
+            :workout_videocall="plan.workout_videocall"
+            :isActive="activeIndex === index"
+            @click="setActive(index)"
+            />
         </div>
     </section>
 </template>
@@ -42,10 +101,10 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .plans{
-        border: 1px solid red;
+        // border: 1px solid red;
         position: relative;
         color: white;
-        padding-block: 30px;
+        padding-block: 80px;
         padding-inline: 50px;
         overflow: hidden;
         
@@ -55,10 +114,10 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1;
-            border: 1px solid yellow;
+            // border: 1px solid yellow;
 
             .right-upper{
-                border: 1px solid red;
+                // border: 1px solid red;
                 h2{
                     font-size: 3rem;
                 }
@@ -75,6 +134,7 @@
                         padding-inline: 11px;
                         border-radius: 50%;
                         color: black;
+                        cursor: pointer;
                     }
 
                     :nth-child(2){
@@ -92,42 +152,38 @@
 
                 .white-bar{
                     background-color: $text-primary;
-                    width: 20%;
+                    width: 33%;
                     height: 100%;
+                    transition: width 0.3s ease;
                 }
             }
         }
 
         .cards-container{
-            border: 1px solid green;
+            // border: 1px solid green;
             display: flex;
             justify-content: space-between;
             gap: 60px;
             padding-block: 5px;
             margin-top: 30px;
-            overflow: hidden;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
             
 
-            .card{
-                border: 1px solid blue;
-                flex: 0 0 40%;
-                height: 300px;
-                border-radius: 20px;
+            // Nascondere scrollbar  su WebKit (Chrome, Safari)
+            &::-webkit-scrollbar {
+                display: none; 
             }
+
+            -ms-overflow-style: none; // Nasconde la scrollbar su IE e Edge
+            scrollbar-width: none; // Nasconde la scrollbar su Firefox
+
         }
 
         .d-block{
             display: block;
-        }
-
-        figure{
-            position: absolute;
-            top: 0;
-            right: -50px;
-
-            img{
-                display: block;
-            }
         }
     }
 
@@ -160,23 +216,6 @@
     // TABLET
     @media screen and (max-width: 768px) {
         .plans{
-            .upper{
-                .right-upper{
-                    h2{
-                        font-size: 2.5rem;
-                    }
-                }
-
-                .progression-bar{
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
-
-    // MOBILE
-    @media screen and (max-width: 425px) {
-        .plans{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -188,14 +227,16 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    
                     h2{
                         font-size: 2.3rem;
                         text-align: center;
                     }
 
                     .arrows{
-                        display: none;
+                        font-size: 22px;
                     }
+
                 }
 
                 .progression-bar{
@@ -206,10 +247,10 @@
 
             .cards-container{
                 padding-block:0;
-                padding-left: 20px;
+                padding-inline: 20px;
                 gap: 20px;
                 .card{
-                    flex: 0 0 90%;
+                    flex: 0 0 80%;
                 }
             }
         }
