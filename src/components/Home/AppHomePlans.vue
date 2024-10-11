@@ -101,12 +101,16 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .plans{
-        // border: 1px solid red;
+        border: 1px solid red;
+        // height: 100vh;
         position: relative;
         color: white;
-        padding-block: 80px;
+        margin-top: 100px;
         padding-inline: 50px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         
         .upper{
             position: relative;
@@ -169,7 +173,7 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
+           
             
 
             // Nascondere scrollbar  su WebKit (Chrome, Safari)
@@ -202,10 +206,8 @@
             }
 
             .cards-container{
-                padding-left: 30px;
-                gap: 30px;
-                
-
+                margin-inline: 20px;
+                gap: 20px;
                 .card{
                     flex: 0 0 50%;
                 }
@@ -247,10 +249,21 @@
 
             .cards-container{
                 padding-block:0;
-                padding-inline: 20px;
+                margin-inline: 20px;
+                padding-inline: 0;
                 gap: 20px;
                 .card{
                     flex: 0 0 80%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        .plans{
+            .cards-container{
+                .card{
+                    flex: 0 0 100%;
                 }
             }
         }

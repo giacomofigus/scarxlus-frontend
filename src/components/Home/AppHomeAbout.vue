@@ -47,8 +47,9 @@
         display: flex;
         justify-content: space-between;
         overflow: hidden;
-        padding-top: 50px;
+        margin-top: 100px;
         height: 100vh;
+        border: 1px solid red;
 
         figure{
             img{

@@ -50,7 +50,7 @@
                 <li class="line">
                     <router-link 
                     class="router" 
-                    to="/servizi"
+                    to="/"
                     @click="$emit('close')">
                         Servizi
                     </router-link>
@@ -58,7 +58,7 @@
                 <li class="line">
                     <router-link 
                     class="router" 
-                    to="/blog"
+                    to="/"
                     @click="$emit('close')">
                         Blog
                     </router-link>
@@ -66,7 +66,7 @@
                 <li>
                     <router-link 
                     class="router" 
-                    to="/contatti"
+                    to="/"
                     @click="$emit('close')">
                         Contatti
                     </router-link>

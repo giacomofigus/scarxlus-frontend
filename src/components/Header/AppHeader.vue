@@ -49,7 +49,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     <router-link 
                     class="router"
                     exact-active-class="active" 
-                    to="/servizi">
+                    to="/">
                         Servizi
                     </router-link>
                 </li>
@@ -57,7 +57,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     <router-link 
                     class="router"
                     exact-active-class="active" 
-                    to="/blog">
+                    to="/">
                         Blog
                     </router-link>
                 </li>
@@ -65,7 +65,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     <router-link 
                     class="router"
                     exact-active-class="active" 
-                    to="/contatti">
+                    to="/">
                         Contatti
                     </router-link>
                 </li>
