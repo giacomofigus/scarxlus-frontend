@@ -100,7 +100,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
     @use '../../assets/styles/partials/variables' as *;
 
     header{
-        z-index: 2;
+        z-index: 3;
         position: fixed;
         left: 0;
         right: 0;
