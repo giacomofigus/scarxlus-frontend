@@ -4,7 +4,8 @@
     import AppHomePlans from '../components/Home/AppHomePlans.vue';
     import AppHomeTestimonials from '../components/Home/AppHomeTestimonials.vue';
     import AppHomeEbooks from '../components/Home/AppHomeEbooks.vue';
-
+    import AppHomeDashboard from '../components/Home/AppHomeDashboard.vue';
+    
     export default{
         components: {
             AppHomeHero,
@@ -12,6 +13,7 @@
             AppHomePlans,
             AppHomeTestimonials,
             AppHomeEbooks,
+            AppHomeDashboard
         }
     }
 </script>
@@ -23,6 +25,7 @@
         <AppHomePlans/>
         <AppHomeTestimonials/>
         <AppHomeEbooks/>
+        <AppHomeDashboard/>
     </main>
 </template>
 
