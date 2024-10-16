@@ -40,7 +40,7 @@
             </div>
 
             <div class="right-container">
-                <h2>I miei allievi</h2>
+                <h2>I miei allievi!</h2>
 
                 <div v-if="testimonials[activeIndex]" class="testimonial">
                     <div class="left-testimonial">
