@@ -8,8 +8,8 @@
     <div class="jumbo">
         <div class="container">
             <h1>
-                <span>Lorem Ipsum,</span>
-                <span class="empty">Dolorem sit amet, </span>
+                <span>Lorem Ipsum,</span> 
+                <span class="empty">Dolorem sit amet, </span> 
                 <span>Consectuer amet</span>  
             </h1>
             <div class="buttons">
@@ -46,7 +46,7 @@
     position: relative;
     height: calc(100vh - 80px);
     margin-top: 80px;
-    background-image: url("../../assets/img/hero-home-cmp.png");
+    background-image: url("../../assets/img/hero-home-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -55,7 +55,6 @@
     align-items: center;
     .container{
         margin-left: 50px;
-        // border: 1px solid red;
         h1{
             color: $text-primary;
             font-size: 55px;
@@ -74,7 +73,6 @@
             }
         }
         .buttons{
-            // border: 1px solid blue;
             padding-top: 60px;
             display: flex;
             gap: 20px;
@@ -117,13 +115,11 @@
     }
 }
 
-// LAPTOP
 @media screen and (max-width: 1024px){
     .jumbo{
         padding-inline: 25px;
         .container{
             margin-left: 0px;
-            // border: 1px solid red;
             h1{
                 font-size: 2.8em;
                 line-height: 60px;
@@ -140,12 +136,13 @@
         }
     }
 }
-// TABLET
+
 @media screen and (max-width: 768px){
     .jumbo{
         padding-inline: 25px;
         justify-content: center;
         text-align: center;
+        background-image: url("../../assets/img/hero-home-tablet.png");
         .container{
             margin-left: 0px;
             // border: 1px solid red;
@@ -171,6 +168,8 @@
 // TELEFONO
 @media screen and (max-width: 425px){
     .jumbo{
+        background-image: url("../../assets/img/hero-home-mobile-cmp.png");
+
         .container{
             h1{
                 font-size: 2.3em;

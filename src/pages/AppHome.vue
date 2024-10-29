@@ -5,6 +5,7 @@
     import AppHomeTestimonials from '../components/Home/AppHomeTestimonials.vue';
     import AppHomeEbooks from '../components/Home/AppHomeEbooks.vue';
     import AppHomeDashboard from '../components/Home/AppHomeDashboard.vue';
+    import AppHomeCommunity from '../components/Home/AppHomeCommunity.vue';
     
     export default{
         components: {
@@ -13,7 +14,8 @@
             AppHomePlans,
             AppHomeTestimonials,
             AppHomeEbooks,
-            AppHomeDashboard
+            AppHomeDashboard,
+            AppHomeCommunity,
         }
     }
 </script>
@@ -26,6 +28,8 @@
         <AppHomeTestimonials/>
         <AppHomeEbooks/>
         <AppHomeDashboard/>
+        <AppHomeCommunity/>
+        ciao
     </main>
 </template>
 
@@ -33,6 +37,5 @@
     main {
         display: flex;
         flex-direction: column;
-
     }
 </style>

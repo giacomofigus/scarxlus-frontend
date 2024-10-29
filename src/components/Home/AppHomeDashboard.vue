@@ -14,7 +14,7 @@
 
         <div class="right-dash">
             <div class="img-container">
-                <img src="../../assets/img/Phone-Container.png" alt="">
+                <img src="../../assets/img/Phone-Container.webp" alt="">
             </div>
         </div>
     </section>
@@ -168,27 +168,16 @@
                 text-align: center;
                 h2{
                     font-size: 2.2rem;
-                    border: 1px solid blue;
                 }
 
                 p{
                     font-size: 20px;
-                    border: 1px solid blue;
-
                 }
 
                 a{
                     font-size: 18px;
-                    border: 1px solid blue;
-
                 }
             }
-
-            img{
-                border: 1px solid blue;
-
-            }
-
         }
     }
 </style>

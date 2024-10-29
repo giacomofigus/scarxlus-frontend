@@ -25,7 +25,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
         <nav>
             <figure>
                 <router-link to="/"> 
-                    <img src="../../assets/img/logo.png" alt="logo">
+                    <img src="../../assets/img/logo.webp" alt="logo">
                 </router-link>
             </figure>
             <ul>

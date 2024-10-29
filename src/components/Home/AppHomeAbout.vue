@@ -16,16 +16,21 @@
             <router-link to="chi-sono">Scopri di più</router-link>
         </div>
 
-        <img class="bg-carlo" src="../../assets/img/Carlo-who.png" alt="carlo">
+        <img 
+        class="bg-carlo" 
+        src="../../assets/img/Carlo-who.png" 
+        alt="carlo"     
+        srcset="../../assets/img/Carlo-who-tablet.webp 768w">
+
         <figure class="forms">
-            <img src="../../assets/img/Forms.png" alt="scarxlus">
+            <img src="../../assets/img/Forms.webp" alt="scarxlus">
         </figure>
         
         <!-- RIGHT -->
         <div class="box right">
             <div class="container-propics">
                 <figure>
-                    <img src="../../assets/img/propics.png" alt="propics">
+                    <img src="../../assets/img/propics.webp" alt="propics">
                 </figure>
                 <p><span>200+</span>Allievi</p>
             </div>
