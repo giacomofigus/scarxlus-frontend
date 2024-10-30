@@ -101,7 +101,6 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .plans{
-        border: 1px solid red;
         // height: 100vh;
         position: relative;
         color: white;

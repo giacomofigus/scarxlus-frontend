@@ -50,7 +50,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: 1px solid blue;
     display: flex;
     align-items: center;
     .container{

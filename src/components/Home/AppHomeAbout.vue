@@ -54,7 +54,6 @@
         overflow: hidden;
         margin-top: 100px;
         height: 100vh;
-        border: 1px solid red;
 
         figure{
             img{

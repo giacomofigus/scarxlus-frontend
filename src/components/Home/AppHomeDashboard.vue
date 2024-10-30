@@ -27,7 +27,6 @@
     .dashboard{
         margin-top: 100px;
         padding-inline: 50px;
-        border: 1px solid red;
         display: flex;
         align-items: center;
         gap: 30px;

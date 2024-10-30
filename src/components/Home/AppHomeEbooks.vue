@@ -96,7 +96,6 @@
     @use '../../assets/styles/partials/mixins' as *;    
 
     .ebooks{
-        border: 1px solid red;
         margin-top: 100px;
         
         .button{

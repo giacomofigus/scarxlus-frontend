@@ -6,6 +6,7 @@
     import AppHomeEbooks from '../components/Home/AppHomeEbooks.vue';
     import AppHomeDashboard from '../components/Home/AppHomeDashboard.vue';
     import AppHomeCommunity from '../components/Home/AppHomeCommunity.vue';
+    import AppHomeConsultancy from '../components/Home/AppHomeConsultancy.vue';
     
     export default{
         components: {
@@ -16,6 +17,7 @@
             AppHomeEbooks,
             AppHomeDashboard,
             AppHomeCommunity,
+            AppHomeConsultancy
         }
     }
 </script>
@@ -29,7 +31,7 @@
         <AppHomeEbooks/>
         <AppHomeDashboard/>
         <AppHomeCommunity/>
-        ciao
+        <AppHomeConsultancy/>
     </main>
 </template>
 

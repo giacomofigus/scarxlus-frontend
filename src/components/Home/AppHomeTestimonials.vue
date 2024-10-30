@@ -67,7 +67,6 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .testimonials{
-        border: 1px solid red;
         margin-top: 100px;
         .container{
             // border: 1px solid blue;
