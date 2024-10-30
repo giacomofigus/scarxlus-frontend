@@ -121,7 +121,7 @@
         .consultancy{
             flex-direction: column-reverse;
             gap: 0;
-            padding-inline: 30px;
+            padding-inline: 80px;
             .info, figure{
                 width: auto;
             }
@@ -133,11 +133,32 @@
             }
 
             .info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
                 h2{
                     word-break: break-all;
+                    margin-bottom: 20px;
                 }
                 
+                .price{
+                    margin-top: 20px;
+                    .discount-price{
+                        color: $button-yellow;
+                    }
+                }
+                
+                a{
+                    margin-top: 30px;
+                }
             }
+        }
+    }
+
+    @media screen and (max-width: 425px){
+        .consultancy{
+            padding-inline: 30px;
         }
     }
 </style>
