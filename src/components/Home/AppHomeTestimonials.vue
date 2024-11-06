@@ -67,7 +67,11 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .testimonials{
-        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // margin-top: 100px;
+        height: 100vh;
         .container{
             // border: 1px solid blue;
             padding: 10px;

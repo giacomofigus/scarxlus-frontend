@@ -26,7 +26,6 @@
         position: relative;
         margin-top: 100px;
         background-color: #141414;
-        // border: 1px solid red;
         display: flex;
         justify-content: center;
         padding-block: 100px;
@@ -38,7 +37,6 @@
             width: 60%;
             text-align: center;
             z-index: 2;
-            // border: 1px solid green;
             h2{
                 font-size: 3rem;
                 color: white;

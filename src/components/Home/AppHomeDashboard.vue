@@ -25,11 +25,13 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .dashboard{
-        margin-top: 100px;
+        height: 100vh;
+        // margin-top: 100px;
         padding-inline: 50px;
         display: flex;
         align-items: center;
         gap: 30px;
+        // border: 1px solid red;
 
         .left-dash, .right-dash{
             flex: 1;
@@ -120,10 +122,11 @@
 
     @media screen and (max-width: 768px) {
         .dashboard{
-            // overflow: visible;
+            margin-top: 100px;
             gap: 40px;
             flex-direction: column;
             padding-inline: 30px;
+            height: auto;
 
             .left-dash, .right-dash{
                 // border: 1px solid green;

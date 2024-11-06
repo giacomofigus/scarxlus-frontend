@@ -8,6 +8,7 @@
     import AppHomeCommunity from '../components/Home/AppHomeCommunity.vue';
     import AppHomeConsultancy from '../components/Home/AppHomeConsultancy.vue';
     import AppHomeCta from '../components/Home/AppHomeCta.vue';
+import AppHomeFaq from '../components/Home/AppHomeFaq.vue';
     
     
     export default{
@@ -20,7 +21,8 @@
             AppHomeDashboard,
             AppHomeCommunity,
             AppHomeConsultancy,
-            AppHomeCta
+            AppHomeCta,
+            AppHomeFaq
         }
     }
 </script>
@@ -36,6 +38,7 @@
         <AppHomeCommunity/>
         <AppHomeConsultancy/>
         <AppHomeCta/>
+        <AppHomeFaq/>
     </main>
 </template>
 
