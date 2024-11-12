@@ -7,25 +7,18 @@
                 required: true,
             }
         },
-        // data(){
-        //     return{
 
-        //     }
-        // },
-        // methods: {
-
-        // }
     }
 </script>
 
 <template>
     <div :class="['offcanvas', { show: isVisible }]">
         <div class="top-container">
-            <img src="../../assets/img/logo.png" alt="">
+            <img src="../../assets/img/logo.webp" alt="logo">
             <button
             @click="$emit('close')"
             >
-                <fa class="icon" :icon="['fas', 'circle-xmark']"/>
+                <img class="x-mark" src="../../assets/img/icons/xmark-solid.svg" alt="close-button">
             </button>
         </div>
 
@@ -102,8 +95,6 @@
     .offcanvas{
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
-
         position: fixed;
         z-index: 10;
         top: 0;
@@ -118,18 +109,18 @@
         color: white;
         padding-inline: 30px;
         padding-block: 30px;
-        // border: 3px solid red;
         .top-container{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            // border: 1px solid green;
             button{
                 background-color: transparent;
                 border: none;
-                color: $button-yellow;
-                font-size: 30px;
-                cursor: pointer;
+                .x-mark{
+                    width:25px;
+                    fill: $button-yellow;
+                    cursor: pointer;
+                }
             }
         }
         nav{

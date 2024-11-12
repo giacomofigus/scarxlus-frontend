@@ -65,15 +65,18 @@
             <div class="right-upper">
                 <h2>I miei piani <span class="d-block">di allenamento</span></h2>
                 <div class="arrows">
-                    <fa 
-                    class="icon arrow" 
-                    :icon="['fas', 'arrow-left']"
-                    @click="previousCard()"/>
+                    <img 
+                    src="../../assets/img/icons/arrow-left-solid.svg" 
+                    alt="arrow-left"
+                    class="icon arrow"
+                    @click="previousCard()">
                     
-                    <fa 
-                    class="icon arrow" 
-                    :icon="['fas', 'arrow-right']"
-                    @click="nextCard()"/>
+                    <img 
+                    src="../../assets/img/icons/arrow-right-solid.svg" 
+                    alt="arrow-right"
+                    class="icon arrow"
+                    @click="nextCard()">
+
                 </div>
             </div>
         </div>
@@ -127,7 +130,6 @@
     
                 .arrows{
                     padding-block: 20px;
-                    font-size: 1.3rem;
                     display: flex;
                     gap: 10px;
 
@@ -138,6 +140,10 @@
                         border-radius: 50%;
                         color: black;
                         cursor: pointer;
+                    }
+
+                    img{
+                        width: 45px;
                     }
 
                     :nth-child(2){

@@ -70,7 +70,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // margin-top: 100px;
         height: 100vh;
         .container{
             // border: 1px solid blue;

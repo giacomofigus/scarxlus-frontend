@@ -72,7 +72,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
             </ul>
             <div class="buttons">
                 <a href="" class="cart">
-                    <fa class="icon" :icon="['fas', 'cart-shopping']"/>
+                    <img src="../../assets/img/icons/cart-shopping-solid.svg" alt="carrello">
                 </a>
 
                 <a href="" class="sign-in">Registrati</a>
@@ -168,8 +168,9 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     background-color: $bg-plans;
                     padding-inline: 10px;
                     border-radius: 50%;
-                    color: $button-yellow;
-                    
+                    img{
+                        width: 20px;
+                    }
                 }
                 .sign-in{
                     border: 1px solid $button-yellow;

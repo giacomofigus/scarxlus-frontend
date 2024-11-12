@@ -33,15 +33,15 @@
             <div
             class="question"
             :class="{ open: activeIndex === index }"
-            v-for="(quest, index) in questions"
+            v-for="(quest, index) in questions "
             :key="index"
+            @click="toggleFaq(index)"
             >
                 <div class="box">
                     <h5>{{ quest.question }}</h5>
-                    <div @click="toggleFaq(index)" class="reveal">   
-                        ciao
-                    </div>
+                    <!-- <img src="../../assets/img/icons/plus-solid.svg" alt="plus-button"> -->
                 </div>
+                
                 <p>
                     {{ quest.answer }}
                 </p>
@@ -55,7 +55,6 @@
     @use '../../assets/styles/partials/mixins' as *;
 
     .faq{
-        // border: 1px solid red;
         margin-block: 100px;
         color: $text-primary;
         h2{
@@ -74,12 +73,27 @@
                 border-radius: 10px;
                 padding-inline: 20px;
                 padding-block: 20px;
-                max-height: 70px;
-                transition: max-height 0.4s ease;
+                height: 90px;
+                transition: height 0.4s ease;
                 overflow: hidden;
+                cursor: pointer;
+
+                .box{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h5{
+                        font-size: 20px;
+                        letter-spacing: 0;
+                        margin-bottom: 20px;
+                    }
+                    img{
+                        width: 20px;
+                    }
+                }
 
                 &.open{
-                    max-height: 160px;
+                    height: 160px;
                 }
 
                 h5, 
@@ -87,14 +101,8 @@
                     font-family: 'Inter', sans-serif;
                 }
 
-                h5{
-                    font-size: 22px;
-                    font-weight: 800;
-                    margin-bottom: 10px;
-                }
-
                 p{
-                    font-size: 19px;
+                    font-size: 18px;
                     color: $text-secondary;
                     display: none;
                 }
@@ -103,16 +111,8 @@
                     display: block;
                 }
 
-                .reveal{
-                    color: $button-yellow;
-                    cursor: pointer;
-                }
+                
 
-                .box{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
             }
 
         }
@@ -128,9 +128,9 @@
                 flex-wrap: wrap;
 
                 .question{
-                    max-height: 100px;
+                    height: 100px;
                     &.open{
-                        max-height: 200px;
+                        height: 200px;
                     }
                 }
             }
@@ -159,9 +159,9 @@
         .faq{
             .grid{
                 .question{
-                    max-height: 150px;
+                    height: 150px;
                     &.open{
-                        max-height: 260px;
+                        height: 260px;
                     }
                 }
             }

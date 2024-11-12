@@ -35,15 +35,10 @@
                 default: false,
             },
         },
-        methods:{
-            transformToIcon(value){ 
-                return value === 1 ? 'circle-check' : 'circle-xmark';
-            },
-            transformToColor(value){
-                return value === 1 ? 'icon-green' : 'icon-red';
-            }
-        },
-
+        mounted(){
+            console.log(this.send_photos);
+            
+        }
     }
 
 </script>
@@ -71,31 +66,41 @@
         <!-- Lista solo se la carta è attiva -->
          <ul :class="{ 'list-active': isActive }">
             <li>
-                <fa 
-                class="icon" 
-                :class="transformToColor(personalized)" 
-                :icon="['fas', transformToIcon(personalized)]" />
+                <img 
+                alt="check-mark"
+                src="../../assets/img/icons/circle-check-regular.svg">
                 <span>Scheda personalizzata</span>    
             </li>
             <li>
-                <fa 
+                <img 
                 class="icon" 
-                :class="transformToColor(test_videocall)" 
-                :icon="['fas', transformToIcon(test_videocall)]" />
+                alt="check-mark"
+                src="../../assets/img/icons/circle-check-regular.svg">
                 <span>Videocall fine mese</span> 
             </li>
             <li>
-                <fa 
-                class="icon" 
-                :class="transformToColor(send_photos)" 
-                :icon="['fas', transformToIcon(send_photos)]" />
+                <img
+                v-if="this.send_photos === 1" 
+                src="../../assets/img/icons/circle-check-regular.svg" 
+                alt="">
+
+                <img
+                v-else 
+                src="../../assets/img/icons/circle-xmark-regular.svg" 
+                alt="">
                 <span>Mandare foto e video al coach</span>   
             </li>
             <li>
-                <fa 
-                class="icon" 
-                :class="transformToColor(workout_videocall)" 
-                :icon="['fas', transformToIcon(workout_videocall)]" />
+                <img
+                v-if="this.workout_videocall === 1" 
+                src="../../assets/img/icons/circle-check-regular.svg" 
+                alt="">
+
+                <img
+                v-else 
+                src="../../assets/img/icons/circle-xmark-regular.svg" 
+                alt="">
+
                 <span>Videochiamata per allenamento</span> 
             </li>
          </ul>
@@ -224,17 +229,10 @@
                     color: black;
                     margin-block: 20px;
                     display: flex;
+                    gap: 10px;
 
-                    .icon{
-                        margin-right: 8px;
-                    }
-    
-                    .icon-green{
-                        color: #06A816;
-                    }
-    
-                    .icon-red{
-                        color: #EF1717;
+                    img{
+                        width: 25px;
                     }
                 }
             }
