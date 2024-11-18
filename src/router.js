@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import AppHome from './pages/AppHome.vue';
 import AppAbout from './pages/AppAbout.vue';
+import AppCoaching from './pages/AppCoaching.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -20,6 +21,14 @@ const router = createRouter({
             component: AppAbout,
             meta: {
                 title: "Chi-sono",
+            }
+        },
+        {
+            path: '/coaching',
+            name: 'coaching',
+            component: AppCoaching,
+            meta: {
+                title: "Coaching",
             }
         },
     ],

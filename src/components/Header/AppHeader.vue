@@ -29,14 +29,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                 </router-link>
             </figure>
             <ul>
-                <li>
-                    <router-link 
-                    class="router" 
-                    exact-active-class="active"
-                    to="/">
-                        Home
-                    </router-link>
-                </li>
+
                 <li>
                     <router-link 
                     class="router"
@@ -49,15 +42,23 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     <router-link 
                     class="router"
                     exact-active-class="active" 
-                    to="/">
-                        Servizi
+                    to="/coaching">
+                        Coaching
                     </router-link>
                 </li>
                 <li>
                     <router-link 
                     class="router"
                     exact-active-class="active" 
-                    to="/">
+                    to="/ebooks">
+                        E-books
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    class="router"
+                    exact-active-class="active" 
+                    to="/blog">
                         Blog
                     </router-link>
                 </li>
@@ -65,7 +66,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     <router-link 
                     class="router"
                     exact-active-class="active" 
-                    to="/">
+                    to="/contatti">
                         Contatti
                     </router-link>
                 </li>

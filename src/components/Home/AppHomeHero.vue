@@ -13,29 +13,15 @@
                 <span>Consectuer amet</span>  
             </h1>
             <div class="buttons">
-                <a class="first-button" href="">Coaching</a>
+                <router-link 
+                class="router first-button"
+                exact-active-class="active" 
+                to="/coaching">
+                    Coaching
+                </router-link>
                 <a class="second-button" href="">E-books</a>
             </div>
         </div>
-
-        <ul>
-            <li>Seguimi</li>
-            <li>
-                <a href="https://www.instagram.com/scarxlus_/" target="_blank">
-                    <fa class="icon" :icon="['fab', 'instagram']"/>
-                </a>
-            </li>
-            <li>
-                <a href="" target="_blank">
-                    <fa class="icon" :icon="['fab', 'tiktok']"/>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/@scarxlus2053" target="_blank">
-                    <fa class="icon" :icon="['fab', 'youtube']"/>
-                </a>
-            </li>
-        </ul>
     </div>
 </template>
 
