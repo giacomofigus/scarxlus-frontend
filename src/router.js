@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './pages/AppHome.vue';
 import AppAbout from './pages/AppAbout.vue';
 import AppCoaching from './pages/AppCoaching.vue';
+import AppEbooks from './pages/AppEbooks.vue';
+import AppBlog from './pages/AppBlog.vue';
+import AppContacts from './pages/AppContacts.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -29,6 +32,30 @@ const router = createRouter({
             component: AppCoaching,
             meta: {
                 title: "Coaching",
+            }
+        },
+        {
+            path: '/ebooks',
+            name: 'ebooks',
+            component: AppEbooks,
+            meta: {
+                title: "Ebooks",
+            }
+        },
+        {
+            path: '/blog',
+            name: 'blog',
+            component: AppBlog,
+            meta: {
+                title: "Blog",
+            }
+        },
+        {
+            path: '/contatti',
+            name: 'contatti',
+            component: AppContacts,
+            meta: {
+                title: "Contatti",
             }
         },
     ],

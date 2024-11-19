@@ -1,16 +1,16 @@
 <script>
-    import AppAboutJumbo from '../components/About/AppAboutJumbo.vue';
+    import AppBlogJumbo from '../components/Blog/AppBlogJumbo.vue';
 
     export default{
         components:{
-            AppAboutJumbo
+            AppBlogJumbo
         }
     }
 </script>
 
 <template>
     <main>
-        <AppAboutJumbo/>
+        <AppBlogJumbo/>
     </main>
 </template>
 

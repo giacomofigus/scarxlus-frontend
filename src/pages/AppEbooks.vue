@@ -1,16 +1,16 @@
 <script>
-    import AppAboutJumbo from '../components/About/AppAboutJumbo.vue';
+    import AppEbooksJumbo from '../components/Ebooks/AppEbooksJumbo.vue';
 
     export default{
         components:{
-            AppAboutJumbo
+            AppEbooksJumbo
         }
     }
 </script>
 
 <template>
     <main>
-        <AppAboutJumbo/>
+        <AppEbooksJumbo/>
     </main>
 </template>
 
