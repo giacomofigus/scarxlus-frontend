@@ -28,10 +28,6 @@
         mounted(){
             axios.get('http://127.0.0.1:8000/api/ebooks').then(response => {
                 this.ebooks = response.data.ebooks
-
-                
-
-                
             });
         }
     }
@@ -57,7 +53,7 @@
                         <p>{{ formatPrice(ebook.product.price) }}</p>
                     </div>
 
-                    <h4>{{ ebook.product.name }}</h4>
+                    <h4>{{ ebook.product.name }} ciao</h4>
 
                     <div class="level">
                         <div class="squares">

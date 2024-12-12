@@ -1,4 +1,5 @@
 <script>
+import { store } from '../../store';
 import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
 
     export default{
@@ -8,7 +9,8 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
         },
         data(){
             return{
-                isOffcanvasVisible: false
+                isOffcanvasVisible: false,
+                store
             };
         },
         methods: {
@@ -76,7 +78,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                     <img src="../../assets/img/icons/cart-shopping-solid.svg" alt="carrello">
                 </a>
 
-                <a href="" class="sign-in">Registrati</a>
+                <a :href="`${store.registerUrl}`" class="sign-in">Registrati</a>
 
                 <button 
                 @click="toggleOffcanvas"
@@ -184,6 +186,7 @@ import AppHeaderOffCanvas from './AppHeaderOffCanvas.vue';
                         color: $text-primary;
                     }
                 }
+
                 .hamburger-menu{
                     display: none;
                 }
