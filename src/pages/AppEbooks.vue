@@ -48,6 +48,7 @@
 
         <!-- LISTA EBOOKS -->
          <section class="ebooks">
+            <h2>I miei e-books:</h2>
              <swiper
                 :slidesPerView="1.2"
                 :spaceBetween="25"
@@ -122,6 +123,16 @@
             margin-top: 100px;
             padding: 5px;
 
+            h2{
+                max-width: 1200px;
+                margin: 0 auto;
+                font-family: $font-bebas;
+                font-weight: 700;
+                font-size: 25px;
+                margin-bottom: 20px;
+                letter-spacing: 3px;
+            }
+
             .mySwiper{
                 max-width: 1200px;
             }
@@ -132,7 +143,7 @@
                 .swiper-pagination-bullet{
                     width: 16px;
                     height: 16px;
-                    background: #ccc;
+                    background: #636260;
                     margin: 0 5px;
                     border-radius: 50%;
                     opacity: 0.8;
@@ -160,6 +171,20 @@
                     .swiper-pagination-bullet{
                         width: 14px;
                         height: 14px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        main{
+            .jumbo{
+                height: 300px;
+                .hero-image{
+                    height: 100%;
+                    img{
+                        height: 100%;
+                        object-fit: cover;
                     }
                 }
             }
