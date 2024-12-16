@@ -167,4 +167,10 @@
             height: 350px;
         }
     }
+
+    @media screen and (max-width: 768px){
+        .card{
+            height: 460px;
+        }
+    }
 </style>

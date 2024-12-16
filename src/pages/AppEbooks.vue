@@ -49,8 +49,8 @@
         <!-- LISTA EBOOKS -->
          <section class="ebooks">
              <swiper
-                :slidesPerView="3"
-                :spaceBetween="30"
+                :slidesPerView="1.2"
+                :spaceBetween="25"
                 :pagination="{
                     el: '.custom-pagination',
                     clickable: true,
@@ -139,7 +139,7 @@
                     transition: width 0.3s, opacity 0.3s;
 
                     &.swiper-pagination-bullet-active {
-                        background: $button-yellow;
+                        background: white;
                         opacity: 1;
                         width: 50px;
                         border-radius: 10px;
